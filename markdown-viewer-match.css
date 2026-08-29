@@ -1,0 +1,163 @@
+/* Markdown Viewer (markdownviewer.pages.dev) matched theme
+   for VS Code / Google Antigravity markdown preview.
+   Colors sampled directly from the app's dark UI.
+
+   Place inside your workspace folder, then in settings.json:
+   "markdown.styles": ["markdown-viewer-match.css"] */
+
+:root {
+    --bg: #0d1117;
+    --bg-panel: #151b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --text-muted: #8b949e;
+    --accent-pink: #d63384;
+    --accent-blue: #58a6ff;
+    --keyword: #ff7b72;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 44px;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+    line-height: 1.25;
+    color: var(--text);
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border);
+}
+
+h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border);
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+p,
+ul,
+ol,
+blockquote {
+    margin-bottom: 1em;
+}
+
+/* Callout-style blockquote, matching the left-bar "Replace ..." note box */
+blockquote {
+    margin-left: 0;
+    padding: 0.6em 1em;
+    color: var(--text);
+    background: var(--bg);
+    border-left: 3px solid var(--border);
+}
+
+/* Inline code — pink accent, pill-style */
+code {
+    font-family: ui-monospace, "SF Mono", Consolas, "Courier New", monospace;
+    font-size: 0.88em;
+    padding: 0.15em 0.5em;
+    border-radius: 6px;
+    background: var(--bg-panel);
+    color: var(--accent-pink);
+}
+
+/* Fenced code blocks */
+pre {
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    color: var(--text);
+    font-size: 0.88em;
+}
+
+/* Basic syntax token overrides (VS Code preview emits these classes
+   for fenced code with a recognized language) */
+.hljs-keyword,
+.token.keyword {
+    color: var(--keyword);
+}
+
+.hljs-comment,
+.token.comment {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.hljs-string,
+.token.string {
+    color: var(--accent-pink);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.2em;
+    background: var(--bg-panel);
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 0.55em 1em;
+    text-align: left;
+}
+
+th {
+    font-weight: 700;
+}
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2em 0;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5em;
+}
